@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<amusement_park>
+    <visitor>
+        <name>Abrahim Reynard</name>
+        <age>15</age>
+        <rides>
+            <ride>Haunted House</ride>
+            <ride>Roller Coaster</ride>
+        </rides>
+    </visitor>
+    <visitor>
+        <name>Rawdha Ismail</name>
+        <age>7</age>
+        <rides>
+            <ride>Teacups</ride>
+            <ride> Carousel</ride>
+        </rides>
+    </visitor>
+</amusement_park>

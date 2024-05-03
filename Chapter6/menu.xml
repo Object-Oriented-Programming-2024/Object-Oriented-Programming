@@ -1,0 +1,17 @@
+<menu>
+    <item>
+        <category>Appetizers</category>
+        <name>Hummus with Pita</name>
+        <price>$5.99</price>
+    </item>
+    <item>
+         <category>Main Courses</category>
+        <name>Shawarma Platter</name>
+        <price>$12.99</price>
+    </item>
+    <item>
+        <category>Desserts</category>
+        <name>Baklava</name>
+        <price>$6.99</price>
+    </item>
+</menu>

@@ -1,0 +1,14 @@
+<family_tree>
+    <person name="Mustafa" gender="male">
+        <person name="Hassan" gender="male">
+            <person name="Ali" gender="male">
+                <person name="Layla" gender="female">
+                </person>
+            </person>
+        </person>
+        <person name="Zubaida" gender="female">
+            <person name="Ibrahim" gender="male">
+            </person>
+        </person>
+    </person>
+</family_tree>
