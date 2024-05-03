@@ -1,0 +1,1 @@
+{transactions: [{__trans_id: "T1", __trans_type: "INCOME", __trans_amount: 200000.0, __trans_description: "Salary", __trans_currency: "AED", __trans_date_time: "2024-05-03 22:44:30"}, {__trans_id: "T2", __trans_type: "EXPENSE", __trans_amount: -200.0, __trans_description: "Gas", __trans_currency: "AED", __trans_date_time: "2024-05-03 22:44:45"}]}
