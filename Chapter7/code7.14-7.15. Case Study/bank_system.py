@@ -77,7 +77,7 @@ try:
  main_bank.addAccount("Rauda","Said","7",10000)
  main_bank.addAccount("Ahmed","Ali","2",500)
  main_bank.transfer("1","2",400)
- main_bank.writeCustomersToFile()
+ main_bank.write_customers_to_file()
  print("The End")
 
 except Exception as e:
