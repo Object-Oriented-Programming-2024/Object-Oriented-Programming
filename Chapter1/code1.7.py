@@ -1,13 +1,12 @@
 import math
 
-
 class Circle:
-    def __init__(self, radius):
-        self.radius = radius
+ def __init__(self, radius):
+     self.radius = radius
 
-    # The below public method will calculate the area of the circle
-    def calculate_area(self):
-        return math.pi * self.radius ** 2
+ # The below public method will calculate the area of the circle
+ def calculate_area(self):
+     return math.pi * self.radius ** 2
 
 
 # Create a Circle instance
