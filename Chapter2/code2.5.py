@@ -1,11 +1,11 @@
 from enum import Enum # Import the module enum
 
 class Student: # Create class “Student” with its attributes
- def __init__(self, firstName, lastName, major, dateOfBirth):
-     self.firstName = firstName
-     self.lastName = lastName
+ def __init__(self, first_name, last_name, major, date_of_birth):
+     self.first_name = first_name
+     self.last_name = last_name
      self.major = major
-     self.dateOfBirth = dateOfBirth
+     self.date_of_birth = date_of_birth
 
 class Major(Enum): # Define a new enumeration class with 3 members CS, IT and EE
  CS = "Computer Science"
@@ -39,14 +39,15 @@ student_info.update({"S0123789": Student("Ahmed", "Samir", Major.EE, "02-05-2002
 del student_names["S0123790"]
 del student_info["S0123790"]
 
-# Display the amended dicitonaries
+# Display the amended dictionaries
 print("Student Names:")
 for student_id, name in student_names.items():
  print(f"{student_id}: {name}")
 
 print("\nStudent Information:")
 for student_id, student in student_info.items():
-    print( f"{student_id}: {student.firstName} {student.lastName} ({student.major.value}),DOB: {student.dateOfBirth}")
+ print( f"{student_id}: {student.first_name } {student.last_name} ({student.major.value}),"\
+       f"DOB: {student.date_of_birth}")
 
 # Display the keys of the student_info dictionary
 print("Student IDs:")
