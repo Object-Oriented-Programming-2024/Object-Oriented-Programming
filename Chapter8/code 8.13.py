@@ -27,11 +27,12 @@ X_train = scaler.fit_transform(X_train)
 # Further split the training set into train and validation sets (80% train, 20% validate)
 X_train,X_val,y_train,y_val = train_test_split(X_train, y_train, test_size=0.2,random_state=42)
 
-# Applying the logistic regression
-from sklearn.linear_model import LogisticRegression
-model=LogisticRegression()
-# Various settings for the hyperparameter C
-hyperparams = {'C': [0.001, 0.01, 0.1, 1, 10, 100]}
+# Applying the Decision Tree Classifier
+from sklearn.tree import DecisionTreeClassifier
+model=DecisionTreeClassifier()
+# Various Hyperparameter settings for depth of the trees
+hyperparams ={'max_depth': [3, 5, 7, None]}
+
 
 # Initialize GridSearchCV with 5 folds and find the best hyperparameter settings
 grid_search = GridSearchCV(model, hyperparams, cv=5, scoring='accuracy')
