@@ -184,8 +184,8 @@ X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.
 models = {
  'Linear Regression': Ridge(),
  'Decision Tree Regression': DecisionTreeRegressor(random_state=42),
- 'Random Forest Regression': RandomForestRegressor(random_state=42) #,
- #'MLP Regression': MLPRegressor(random_state=42)
+ 'Random Forest Regression': RandomForestRegressor(random_state=42),
+ 'MLP Regression': MLPRegressor(random_state=42)
 }
 
 # Defining hyperparameter dictionary for each model
@@ -193,15 +193,15 @@ param_grids = {
  'Linear Regression': {'alpha': [0.01, 0.1, 1.0, 10.0]},
  'Decision Tree Regression': {'max_depth': [None, 5, 10, 15]},
  'Random Forest Regression': {'n_estimators': [100, 200, 300],
-                                'max_depth': [None, 5, 10,15]}#,
- # 'MLP Regression': {
- #     'hidden_layer_sizes': [(100, 50)],
- #     'activation': ['relu'],
- #     'solver': ['adam'],
- #     'alpha': [0.001, 0.01],
- #     'learning_rate': ['constant', 'adaptive'],
- #     'max_iter': [500, 1000]
- # }
+                                'max_depth': [None, 5, 10,15]},
+ 'MLP Regression': {
+     'hidden_layer_sizes': [(100, 50)],
+     'activation': ['relu'],
+     'solver': ['adam'],
+     'alpha': [0.001, 0.01],
+     'learning_rate': ['constant', 'adaptive'],
+     'max_iter': [500, 1000]
+ }
 }
 
 best_performance_model= [0,None] # Varaible to store the best performing model
