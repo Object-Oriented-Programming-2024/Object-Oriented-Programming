@@ -262,8 +262,3 @@ plt.show()
 import pickle
 file= open('best_model.pkl', 'wb')
 pickle.dump(best_performance_model[1], file)
-
-
-
-
-
