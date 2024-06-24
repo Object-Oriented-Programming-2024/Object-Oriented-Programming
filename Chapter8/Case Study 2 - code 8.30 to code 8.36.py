@@ -7,7 +7,7 @@ df = pd.read_csv("https://raw.githubusercontent.com/Object-Oriented-Programming-
 print("\n******* First 5 Rows of the data *******")
 print(df.head(5))
 
-#Displying basic details about the features
+#  Displaying basic details about the features
 print("\n******* Basic Information about the Data frame *******")
 print(df.info())
 
@@ -61,7 +61,7 @@ for col in categories:
  print( df[col].unique())
  print()
 
-#Replacing duplicated categories within Education Level
+# Replacing duplicated categories within Education Level
 df['Education Level'] = df['Education Level'].replace("Bachelor's Degree","Bachelor's")
 df['Education Level'] = df['Education Level'].replace("Master's Degree","Master's")
 df['Education Level'] = df['Education Level'].replace("phD","PhD")
@@ -89,6 +89,7 @@ print(df.head())
 
 # code 8.32
 numerical_cols= df.select_dtypes(include=['int', 'float']).columns
+
 # Find the correlation between features
 cor_matrix = df[numerical_cols].corr()
 print(cor_matrix)
@@ -204,7 +205,7 @@ param_grids = {
  }
 }
 
-best_performance_model= [0,None] # Varaible to store the best performing model
+best_performance_model= [0,None] # Variable to store the best performing model
 
 for name, model in models.items():# Train and evaluate each model using GridSearchCV
  grid_search = GridSearchCV(model, param_grids[name], scoring='neg_mean_absolute_error',
@@ -251,6 +252,7 @@ print(f'R Square: {r2_test:.4f}')
 # Visualize the difference between predictions and actual values on the test set
 plt.figure()
 sns.scatterplot(x=y_test, y=y_test_pred, color='blue')
+
 # Regression line
 sns.regplot(x=y_test, y=y_test_pred, scatter=False, color='green')
 plt.title('Prediction on Test Set (Random Forest Regression)', fontsize=14)
