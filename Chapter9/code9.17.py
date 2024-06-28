@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 from nltk.sentiment import SentimentIntensityAnalyzer
 from nltk.probability import FreqDist
 
-df = pd.read_csv('customer_reviews.csv') # Load the customer review dataset
+df = pd.read_csv('https://raw.githubusercontent.com/Object-Oriented-Programming-2024/Object-Oriented-Programming/main/Chapter9/customer_reviews.csv') # Load the customer review dataset
 # View the column information
 print(df.info())
 review_texts = df['Review Text'].tolist() # Extract text and store it into a list
@@ -34,18 +34,18 @@ for text in review_texts:
     tokens = tokenize_text(text)
     print(f"Tokens: {tokens}")
 
-# Normalize the tokens
-normalized_tokens = normalize_text(tokens)
-print(f"Normalized Tokens: {normalized_tokens}")
+    # Normalize the tokens
+    normalized_tokens = normalize_text(tokens)
+    print(f"Normalized Tokens: {normalized_tokens}")
 
-# Apply Parts-of-Speech Tagging
-pos_tags = tag_tokens(normalized_tokens)
-print(f"POS Tags: {pos_tags}")
+    # Apply Parts-of-Speech Tagging
+    pos_tags = tag_tokens(normalized_tokens)
+    print(f"POS Tags: {pos_tags}")
 
-# Apply Frequency Distribution
-freq_dist = FreqDist(normalized_tokens)
-print("Most Common Words:", freq_dist.most_common(10))
+    # Apply Frequency Distribution
+    freq_dist = FreqDist(normalized_tokens)
+    print("Most Common Words:", freq_dist.most_common(10))
 
-# Apply Sentiment Analysis
-sentiment = get_sentiment(text)
-print(f"Sentiment: {sentiment}\n")
+    # Apply Sentiment Analysis
+    sentiment = get_sentiment(text)
+    print(f"Sentiment: {sentiment}\n")
